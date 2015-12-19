@@ -1,4 +1,5 @@
-
+.sass-cache/
+test/
 # Created by https://www.gitignore.io/api/ower,grunt,osx,node,yeoman
 
 #!! ERROR: ower is undefined. Use list command to see defined gitignore types !!#
