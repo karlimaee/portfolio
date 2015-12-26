@@ -26,47 +26,14 @@
         <div class="row">
           <div ui-view class="col-md-12">
             <!-- Add your site or application content here -->
-            <div class="row">
-              <div class="col-md-2 menu-item-container">
-              <a class="menu-item"  href="partials/blueshoe.html">
-              </a>
-              </div>
-              <div class="col-md-2 menu-item-container">
-              <a class="menu-item"  href="partials/yay.html">
-              </a>
-              </div>
-              <div class="col-md-2 menu-item-container">
-              <a class="menu-item"  href="partials/consights.html"> 
-              </a>
-              </div>
-              <div class="col-md-2 menu-item-container">
-              <a class="menu-item"  href="partials/mercur.html"> 
-              </a>
-              </div>
-              <div class="col-md-2 menu-item-container">
-              <a class="menu-item"  href="partials/mobile.html"> 
-              </a>
-              </div>
-              <div class="col-md-2 menu-item-container">
-              <a class="menu-item"  href="partials/work.html"></a>
-            </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6 tab-menu-item">
-                <a class="tab-menu-item-text" href="partials/about.html">
-                  About
-                </a>
-              </div>
-              <div class="col-md-6 tab-menu-item">
-                <a class="tab-menu-item-text" href="partials/contact.html">
-                  Contact
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+            <div class="row no-font">
+<div class="menu-item-container">
+<a class="menu-item"  href="partials/blueshoe.html"></a>
+            </div><div class="menu-item-container"><a class="menu-item"  href="partials/yay.html"></a>
+            </div><div class="menu-item-container"><a class="menu-item"  href="partials/consights.html"></a>
+            </div><div class="menu-item-container"><a class="menu-item"  href="partials/mercur.html"></a>
+            </div><div class="menu-item-container"><a class="menu-item"  href="partials/mobile.html"></a>
+            </div><div class="menu-item-container"><a class="menu-item"  href="partials/work.html"></a></div></div><div class="row"><div class="col-md-6 tab-menu-item"><a class="tab-menu-item-text" href="partials/about.html">About</a></div><div class="col-md-6 tab-menu-item"><a class="tab-menu-item-text" href="partials/contact.html">Contact</a></div></div></div></div></div>
       <!-- We'll also add some navigation: -->
 
 
@@ -75,35 +42,41 @@
       <!-- build:js(.) scripts/vendor.js -->
       <!-- bower:js -->
       <script src="bower_components/jquery/dist/jquery.js"></script>
-      <script src="bower_components/angular/angular.js"></script>
-      <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-      <script src="bower_components/angular-animate/angular-animate.js"></script>
-      <script src="bower_components/angular-route/angular-route.js"></script>
-      <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+      <script src="bower_components/velocity/velocity.js"></script>
+      <script src="bower_components/velocity/velocity.ui.js"></script>
       <!-- endbower -->
       <!-- endbuild -->
 
       <!-- build:js({.tmp,app}) scripts/scripts.js -->
       <script type="text/javascript" src="scripts/slick.min.js"></script>
-      <script src="scripts/app.js"></script>
-      <script src="scripts/controllers/main.js"></script>
-      <script src="scripts/controllers/about.js"></script>
       <script language="javascript" type="text/javascript" src="scripts/timeline_animation.js"></script>
       <!-- endbuild -->
 
       <script type="text/javascript">
+
         $('.menu-item-container').mouseenter(function() {
-          $(this).animate({width: '20%', options : {queue: true,  duration: 4000}});
+          $(this).velocity('stop');
+          $(this).velocity({
+            width: '20%'
+          }, {duration: 500, queue: false});
           $(this).siblings().each(function() {
-            $(this).animate({width: '16%', options : {queue: false,  duration: 0}});
+            $(this).velocity({
+              width: '16%'
+            }, {duration: 500, queue: false});
           });
         });
         $('.menu-item-container').mouseleave(function() {
-          $(this).animate({width: '16.66666667%', options : {queue: true,  duration: 4000}});
-          $(this).siblings().each(function(i,val) {
-            $(val).animate({width: '16.66666667%', options : {queue: false,  duration: 0}});
+          $(this).velocity('stop');
+          $(this).velocity({
+            width: '16.66666667%'
+          }, {duration: 500, queue: false});
+          $(this).siblings().each(function() {
+            $(this).velocity({
+              width: '16.66666667%'
+            }, {duration: 500, queue: false});
           });
         });
+
       </script>
     </body>
     </html>
