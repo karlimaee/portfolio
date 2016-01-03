@@ -55,9 +55,7 @@ $(document).ready(function () {
 		var scrollFunction = function () {
 
 			/* Position where the timeline should begin */
-			var heightToTimeline = $('#about_header').outerHeight() + $('#about_greeting').outerHeight() + $('#about_skills').outerHeight() 
-			+ $('#about_work').outerHeight() + $('#about_partners').outerHeight() - $('#about_timeline').outerHeight()
-			- $('#about_cv').outerHeight() - $('#about_contact').outerHeight();
+			var heightToTimeline = $('#about_timeline')[0].offsetTop;
 
 			var fromTop = $(window).scrollTop();
 			/* Position of the last bubble --> where timeline should end */
@@ -155,92 +153,72 @@ $(document).ready(function () {
 					marginTop: - durationHeight,
 					height: durationHeight,
 				}, 300);
-			}
+			};
 
 			var expandDivBot = function (element, durationHeight) {
 				element = $('#' + element + ' .timeline_duration');
 				element.animate({
 					height: durationHeight,
 				}, 300);
-			}
+			};
 
 			$('#goldmarie_bubble').mouseenter(function () {
-				expandDivTop('goldmarie_bubble', 170);
-			});
-
-			$('#goldmarie_bubble').mouseleave(function () {
+				expandDivTop('goldmarie_bubble', 164);
+			}).mouseleave(function () {
 				expandDivTop('goldmarie_bubble', 0);
 			});
 
 			$('#msc_bubble_grad').mouseenter(function () {
 				expandDivBot('msc_bubble_grad', 520);
-			});
-
-			$('#msc_bubble_grad').mouseleave(function () {
+			}).mouseleave(function () {
 				expandDivBot('msc_bubble_grad', 0);
 			});
 
 			$('#buffalo_bubble').mouseenter(function () {
 				expandDivTop('buffalo_bubble', 170);
-			});
-
-			$('#buffalo_bubble').mouseleave(function () {
+			}).mouseleave(function () {
 				expandDivTop('buffalo_bubble', 0);
 			});
 
 			$('#ibm2_bubble').mouseenter(function () {
-				expandDivTop('ibm2_bubble', 170);
-			});
-
-			$('#ibm2_bubble').mouseleave(function () {
+				expandDivTop('ibm2_bubble', 100);
+			}).mouseleave(function () {
 				expandDivTop('ibm2_bubble', 0);
 			});
 
 			$('#msc_bubble').mouseenter(function () {
 				expandDivTop('msc_bubble', 150);
-			});
-
-			$('#msc_bubble').mouseleave(function () {
+			}).mouseleave(function () {
 				expandDivTop('msc_bubble', 0);
 			});
 
 			$('#ibm_bubble').mouseenter(function () {
 				expandDivTop('ibm_bubble', 170);
-			});
-
-			$('#ibm_bubble').mouseleave(function () {
+			}).mouseleave(function () {
 				expandDivTop('ibm_bubble', 0);
 			});
 
 			$('#omg_bubble').mouseenter(function () {
 				expandDivTop('omg_bubble', 170);
-			});
-
-			$('#omg_bubble').mouseleave(function () {
+			}).mouseleave(function () {
 				expandDivTop('omg_bubble', 0);
 			});
 
 			$('#bsc_bubble_grad').mouseenter(function () {
 				expandDivBot('bsc_bubble_grad', 520);
-			});
-
-			$('#bsc_bubble_grad').mouseleave(function () {
+			}).mouseleave(function () {
 				expandDivBot('bsc_bubble_grad', 0);
 			});
 
 			$('#ms_bubble').mouseenter(function () {
 				expandDivTop('ms_bubble', 325);
-			});
-
-			$('#ms_bubble').mouseleave(function () {
+			}).mouseleave(function () {
 				expandDivTop('ms_bubble', 0);
 			});
 
 			$('#bsc_bubble').mouseenter(function () {
 				expandDivTop('bsc_bubble', 490);
-			});
-
-			$('#bsc_bubble').mouseleave(function () {
+			}).mouseleave(function () {
 				expandDivTop('bsc_bubble', 0);
 			});
 
