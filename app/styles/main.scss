@@ -3,9 +3,9 @@
 
 @import url(https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
 
-@font-face { 
-  font-family: "Antonio Regular"; 
-  src: url("fonts/Antonio-Regular.ttf"); 
+@font-face {
+  font-family: "Antonio Regular";
+  src: url("fonts/Antonio-Regular.ttf");
 }
 
 
@@ -77,6 +77,9 @@ h1,h2,h3,h4 {
   text-decoration: none;
   color: #2d2e33;
   display: block;
+  &:hover {
+    color: #2d2e33;
+  }
 }
 
 /* WORK PAGE */
@@ -116,7 +119,7 @@ h1,h2,h3,h4 {
   color: white;
   .headline-underline {
     height: 5px;
-    background-color: white; 
+    background-color: white;
     border: 2px solid white;
     margin-left: auto;
     margin-right: auto;
@@ -125,9 +128,17 @@ h1,h2,h3,h4 {
   }
 
   a, a:link, a:visited, a:hover, a:active {
-    text-decoration: none;
     color: white;
   }
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
 }
 
 .preview_images {
@@ -151,7 +162,7 @@ h1,h2,h3,h4 {
   background-blend-mode: overlay;
   color: white;
   .headline-underline {
-    background-color: white; 
+    background-color: white;
     border: 2px solid white;
   }
 }
@@ -166,7 +177,7 @@ h1,h2,h3,h4 {
   background-blend-mode: overlay;
   color: white;
   .headline-underline {
-    background-color: white; 
+    background-color: white;
     border: 2px solid white;
   }
   .button {
@@ -281,7 +292,7 @@ h1,h2,h3,h4 {
   color: #2C3E50;
 }
 
-.event_desc h3 a, a:link, a:visited, a:hover, a:active {
+.event_desc h3 {
   text-decoration: none;
   color: #2C3E50;
 }
@@ -292,7 +303,7 @@ h1,h2,h3,h4 {
   width: 350px;
   text-align: right;
   margin-top: 40px;
-  opacity: 0;  
+  opacity: 0;
 }
 
 .event_month_job {
@@ -322,7 +333,7 @@ h1,h2,h3,h4 {
 
 .headline-underline {
   height: 5px;
-  background-color: #2d2e33; 
+  background-color: #2d2e33;
   border: 2px solid #2d2e33;
   margin-left: auto;
   margin-right: auto;
@@ -549,13 +560,17 @@ h1,h2,h3,h4 {
   text-align: center;
   font-size: 3em;
   background-color: #2d2e33;
-  color: #cadce1;
   height: 20vh;
   line-height: 20vh;
 }
 
 .tab-menu-item-text {
-  font-family: "Antonio Regular";;
+  font-family: "Antonio Regular";
+  color: #cadce1;
+  &:hover, &:link, &:visited, &:active {
+    color: #cadce1;
+    text-decoration: none;
+  }
 }
 
 .underline {
@@ -593,7 +608,7 @@ h1,h2,h3,h4 {
 
 [ui-view].ng-leave {
   opacity: 1;
-  /*padding-left: 0px;*/  
+  /*padding-left: 0px;*/
   -webkit-transform:translate3d(0, 0, 0);
   -moz-transform:translate3d(0, 0, 0);
   transform:translate3d(0, 0, 0);
@@ -682,106 +697,118 @@ h1,h2,h3,h4 {
 
 }
 .menu-item {
-  opacity: 0.7;
   text-align: center;
   font-family: "Antonio Regular", sans-serif;
+  color: #cadce1;
   display: block;
-  height: 80vh;
+  height: 90vh;
   z-index: 1;
-  &:hover {
+  background-repeat: no-repeat;
+  h1 {
+      padding-top: 45px;
+      margin-top: 0;
+      font-size: 3em;
+  }
+}
+
+.menu-item.bs {
+  background-image: url(/images/backgrounds/BLUESHOE_mac_website_blank_small.png);
+  background-size: auto 60%;
+  background-repeat: no-repeat;
+  background-position: top 70% center;
+  h1 {
+    color: #2d2e33;
+  }
+  .background {
+    -moz-background: -moz-linear-gradient(top, #94a7b6 0%, #bbcede 100%);
+    -webkit-background: -webkit-linear-gradient(top, #94a7b6 0%, #bbcede 100%);
+    background: linear-gradient(to bottom, #94a7b6 0%, #bbcede 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#94a7b6', endColorstr='#bbcede',GradientType=0 ); /* IE6-9 */
+    z-index: -1;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.menu-item-container {
+  opacity: 0.7;
+&:hover {
    opacity : 1;
    -webkit-transition: opacity 500ms ease-out;
    -moz-transition: opacity 500ms ease-out;
    -o-transition: opacity 500ms ease-out;
    transition: opacity 500ms ease-out;
-
  }
 }
 
-
-.menu-item.bs {
-  background: #a6b3c0; /* Old browsers */
-  -moz-background: url(../images/BLUESHOE_mac_website.png) center center no-repeat, -moz-linear-gradient(top, #94a7b6 0%, #94a7b6 53%, #bbcede 85%, #bbcede 100%);;
-  -webkit-background: url(../images/BLUESHOE_mac_website.png) center center no-repeat, -webkit-linear-gradient(top, #94a7b6 0%,#94a7b6 53%,#bbcede 85%,#bbcede 100%);
-  background: url(../images/BLUESHOE_mac_website.png) center center no-repeat, linear-gradient(to bottom, #94a7b6 0%,#94a7b6 53%,#bbcede 85%,#bbcede 100%);;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6b3c0', endColorstr='#c5d5e2',GradientType=0 ); /* IE6-9 */
-  background-size: contain, cover;
-}
-
-.menu-item.yay {
-  background: #a6b3c0; /* Old browsers */
-  -moz-background: url(../images/YAY_mockup.png) center center no-repeat, -moz-linear-gradient(top, #94a7b6 0%, #94a7b6 53%, #bbcede 85%, #bbcede 100%);;
-  -webkit-background: url(../images/YAY_mockup.png) center center no-repeat, -webkit-linear-gradient(top, #94a7b6 0%,#94a7b6 53%,#bbcede 85%,#bbcede 100%);
-  background: url(../images/YAY_mockup.png) center center no-repeat, linear-gradient(to bottom, #94a7b6 0%,#94a7b6 53%,#bbcede 85%,#bbcede 100%);;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6b3c0', endColorstr='#c5d5e2',GradientType=0 ); /* IE6-9 */
+.menu-item-container:nth-child(1) {
+  -moz-background: -moz-linear-gradient(top, #94a7b6 0%, #bbcede 100%);
+  -webkit-background: -webkit-linear-gradient(top, #94a7b6 0%, #bbcede 100%);
+  background: linear-gradient(to bottom, #94a7b6 0%, #bbcede 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#94a7b6', endColorstr='#bbcede',GradientType=0 ); /* IE6-9 */
   background-size: cover;
   background-position-y: 0;
 }
-
-.menu-item.consights {
-  background: #a6b3c0; /* Old browsers */
-  -moz-background: url(../images/consights/CONSIGHTS_businesscards_v2.png) center center no-repeat, -moz-linear-gradient(top, #94a7b6 0%, #94a7b6 53%, #bbcede 85%, #bbcede 100%);;
-  -webkit-background: url(../images/consights/CONSIGHTS_businesscards_v2.png) center center no-repeat, -webkit-linear-gradient(top, #94a7b6 0%,#94a7b6 53%,#bbcede 85%,#bbcede 100%);
-  background: url(../images/consights/CONSIGHTS_businesscards_v2.png) center center no-repeat, linear-gradient(to bottom, #94a7b6 0%,#94a7b6 53%,#bbcede 85%,#bbcede 100%);;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6b3c0', endColorstr='#c5d5e2',GradientType=0 ); /* IE6-9 */
-  background-size: cover;
-  background-position-y: 0;
-}
-
-.menu-item.mercur {
-  background: #a6b3c0; /* Old browsers */
-  -moz-background: url(../images/mercur/MERCUR_macbookdashboard.png) center center no-repeat, -moz-linear-gradient(top, #94a7b6 0%, #94a7b6 53%, #bbcede 85%, #bbcede 100%);;
-  -webkit-background: url(../images/mercur/MERCUR_macbookdashboard.png) center center no-repeat, -webkit-linear-gradient(top, #94a7b6 0%,#94a7b6 53%,#bbcede 85%,#bbcede 100%);
-  background: url(../images/mercur/MERCUR_macbookdashboard.png) center center no-repeat, linear-gradient(to bottom, #94a7b6 0%,#94a7b6 53%,#bbcede 85%,#bbcede 100%);;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6b3c0', endColorstr='#c5d5e2',GradientType=0 ); /* IE6-9 */
-  background-size: cover;
-  background-position-y: 0;
-}
-
-.menu-item.mobile {
-  background: #a6b3c0; /* Old browsers */
-  -moz-background: url(../images/mobile_usabillity/RESEARCH_poster_räumlich.png) center center no-repeat, -moz-linear-gradient(top, #94a7b6 0%, #94a7b6 53%, #bbcede 85%, #bbcede 100%);;
-  -webkit-background: url(../images/mobile_usabillity/RESEARCH_poster_räumlich.png) center center no-repeat, -webkit-linear-gradient(top, #94a7b6 0%,#94a7b6 53%,#bbcede 85%,#bbcede 100%);
-  background: url(../images/mobile_usabillity/RESEARCH_poster_räumlich.png) center center no-repeat, linear-gradient(to bottom, #94a7b6 0%,#94a7b6 53%,#bbcede 85%,#bbcede 100%);;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6b3c0', endColorstr='#c5d5e2',GradientType=0 ); /* IE6-9 */
-  background-size: cover;
-  background-position-y: 0;
-}
-
 .menu-item-container:nth-child(1) .menu-item {
-  background-image  : url(../images/BLUESHOE_mac_website.png);
-  background-size: auto 100%;
-  background-position: 25% 0;
+  background-image  : url(../images/backgrounds/BLUESHOE_mac_website_blank_small.png);
+  background-size: auto 50%;
+  background-position: 70% 50%;
 }
-
+.menu-item-container:nth-child(2){
+  background: #fee6e6;
+}
 .menu-item-container:nth-child(2) .menu-item {
-  background-image  : url(../images/YAY_mockup.png);
-  background-size: auto 100%;
-  background-position: 45% 0;
+  background-image  : url(../images/backgrounds/YAY_phonemockups_blank_small.png);
+  background-size: auto 60%;
+  background-position: 25% 50%;
 }
-
+.menu-item-container:nth-child(3) {
+  -moz-background: -moz-linear-gradient(top, #5d5e62 0%, #868689 100%);
+  -webkit-background: -webkit-linear-gradient(top, #5d5e62 0%, #868689 100%);
+  background: linear-gradient(to bottom, #5d5e62 0%, #868689 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d5e62', endColorstr='#868689',GradientType=0 ); /* IE6-9 */
+  background-size: cover;
+  background-position-y: 0;
+}
 .menu-item-container:nth-child(3) .menu-item {
-  background-image  : url(../images/CONSIGHTS_businesscards_v2.png);
-  background-size: auto 100%;
-  background-position: 20% 0;
+  background-image  : url(../images/backgrounds/CONSIGHTS_businesscards_blank_small.png);
+  background-size: auto 50%;
+  background-position: 60% 50%;
 }
-
+.menu-item-container:nth-child(4) {
+  -moz-background: -moz-linear-gradient(left, #6dacd3 0%, #92bed9 100%);
+  -webkit-background: -webkit-linear-gradient(left, #6dacd3 0%, #92bed9 100%);
+  background: linear-gradient(to right, #6dacd3 0%, #92bed9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6dacd3', endColorstr='#92bed9',GradientType=0 ); /* IE6-9 */
+  background-size: cover;
+  background-position-y: 0;
+}
 .menu-item-container:nth-child(4) .menu-item {
-  background-image  : url(../images/MERCUR_macbookdashboard.png);
-  background-size: auto 100%;
-  background-position: 20% 0;
+  background-image  : url(../images/backgrounds/MERCUR_macbookdashboard_blank_small.png);
+  background-size: auto 50%;
+  background-position: 00% 50%;
 }
 
 .menu-item-container:nth-child(5) .menu-item {
-  background-image  : url(../images/research.png);
-  background-size: auto 100%;
-  background-position: 20% 0;
+  background-image  : url(../images/backgrounds/RESEARCH_poster_blank_small.png);
+  background-size: auto 80%;
+  background-position: 30% 50%;
+}
+.menu-item-container:nth-child(5) {
+  -moz-background: -moz-linear-gradient(left, #ddf1ef 0%, #eff9f8 100%);
+  -webkit-background: -webkit-linear-gradient(left, #ddf1ef 0%, #eff9f8 100%);
+  background: linear-gradient(to right, #ddf1ef 0%, #eff9f8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ddf1ef', endColorstr='#eff9f8',GradientType=0 ); /* IE6-9 */
+  background-size: cover;
+  background-position-y: 0;
 }
 
 .menu-item-container:nth-child(6) .menu-item {
-  background-image  : url(../images/WORK_header.jpeg);
+  background-image  : url(../images/backgrounds/WORK_header._blankjpeg);
   background-size: auto 100%;
-  background-position: 20% 0;
+  background-position: 20% 50%;
 }
 
 
@@ -891,6 +918,15 @@ h1,h2,h3,h4 {
   .yay {
     background-image: url(../images/YAY_phonemockups.png);
   }
+  .blueshoe {
+    background-image: url(../images/blueshoe.png);
+  }
+  .mercur {
+    background-image: url(../images/blueshoe.png);
+  }
+  .mobile {
+    background-image: url(../images/blueshoe.png);
+  }
   img {
     position: relative;
     top: 0;
@@ -929,4 +965,32 @@ h1,h2,h3,h4 {
 .contact-icon {
   margin: 0 10px;
   height: 30px;
+}
+
+#menu {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  z-index: 100;
+}
+
+.menu-bar {
+  height: 5px;
+  width: 40px;
+  background-color: #2d2e33;
+  border: 0;
+  margin: 5px 0;
+  padding: 0;
+}
+
+.socialMedia-img {
+  height: 45px;
+  width: 45px;
+}
+.stellarBg-bs-scribble {
+  background-image: url(/images/blueshoe/BLUESHOE_logo-skribbles.jpeg);
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
