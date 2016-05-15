@@ -429,6 +429,17 @@ a:active {
 
 /* CONSIGHTS PAGE START */
 
+.headline-underline-white {
+  border-color: white;
+  background-color: white;
+}
+.consightsBg--lightGrey {
+  background-color: #e1e1e1;
+  padding-bottom: -1px
+}
+.consightsBg--lightBlue {
+  background-color: #d8e5ea;
+}
 .consights-color-1 {
   background-color: #E5E012;
 }
@@ -701,7 +712,7 @@ a:active {
   font-family: "Antonio Regular", sans-serif;
   color: #cadce1;
   display: block;
-  height: 90vh;
+  height: 80vh;
   z-index: 1;
   background-repeat: no-repeat;
   h1 {
@@ -710,7 +721,9 @@ a:active {
       font-size: 3em;
   }
 }
-
+.row.menu-item {
+  height: 90vh;
+}
 .menu-item.bs {
   background-image: url(/images/backgrounds/BLUESHOE_mac_website_blank_small.png);
   background-size: auto 60%;
@@ -724,6 +737,48 @@ a:active {
     -webkit-background: -webkit-linear-gradient(top, #94a7b6 0%, #bbcede 100%);
     background: linear-gradient(to bottom, #94a7b6 0%, #bbcede 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#94a7b6', endColorstr='#bbcede',GradientType=0 ); /* IE6-9 */
+    z-index: -1;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.menu-item.mobile {
+  background-image: url(/images/backgrounds/RESEARCH_poster_blank.png);
+  background-size: auto 60%;
+  background-repeat: no-repeat;
+  background-position: top 70% center;
+  h1 {
+    color: #2d2e33;
+  }
+  .background {
+    -moz-background: -moz-linear-gradient(top, #94a7b6 0%, #bbcede 100%);
+    -webkit-background: -webkit-linear-gradient(top, #94a7b6 0%, #bbcede 100%);
+    background: linear-gradient(to bottom, #94a7b6 0%, #bbcede 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#94a7b6', endColorstr='#bbcede',GradientType=0 ); /* IE6-9 */
+    z-index: -1;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+.menu-item.consights {
+  background-image: url(/images/backgrounds/CONSIGHTS_businesscards_blank.png);
+  background-size: auto 60%;
+  background-repeat: no-repeat;
+  background-position: top 70% center;
+  h1 {
+    color: #ffffff;
+  }
+  .background {
+    -moz-background: -moz-linear-gradient(top, #5e5f63 0%, #838387 100%);
+    -webkit-background: -webkit-linear-gradient(top, #5e5f63 0%, #838387 100%);
+    background: linear-gradient(to bottom, #5e5f63 0%, #838387 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e5f63', endColorstr='#838387',GradientType=0 ); /* IE6-9 */
     z-index: -1;
     position: relative;
     top: 0;
@@ -912,9 +967,6 @@ a:active {
     font-size: 16px;
     display: block;
   }
-  .consights {
-    background-image: url(../images/CONSIGHTS_businesscards_v2.png);
-  }
   .yay {
     background-image: url(../images/YAY_phonemockups.png);
   }
@@ -922,7 +974,7 @@ a:active {
     background-image: url(../images/blueshoe.png);
   }
   .mercur {
-    background-image: url(../images/blueshoe.png);
+    background-image: url(../images/mercur/MERCUR_macbookdashboard.jpeg);
   }
   .mobile {
     background-image: url(../images/blueshoe.png);
@@ -981,6 +1033,9 @@ a:active {
   border: 0;
   margin: 5px 0;
   padding: 0;
+}
+.menu-bar--white {
+  background-color: white;
 }
 
 .socialMedia-img {
