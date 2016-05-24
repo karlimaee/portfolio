@@ -187,25 +187,25 @@ $(document).ready(function () {
 			});
 
 			$('#msc_bubble').mouseenter(function () {
-				expandDivTop('msc_bubble', 150);
+				expandDivTop('msc_bubble', 530);
 			}).mouseleave(function () {
 				expandDivTop('msc_bubble', 0);
 			});
 
 			$('#ibm_bubble').mouseenter(function () {
-				expandDivTop('ibm_bubble', 170);
+				expandDivTop('ibm_bubble', 220);
 			}).mouseleave(function () {
 				expandDivTop('ibm_bubble', 0);
 			});
 
 			$('#omg_bubble').mouseenter(function () {
-				expandDivTop('omg_bubble', 170);
+				expandDivTop('omg_bubble', 220);
 			}).mouseleave(function () {
 				expandDivTop('omg_bubble', 0);
 			});
 
 			$('#bsc_bubble_grad').mouseenter(function () {
-				expandDivBot('bsc_bubble_grad', 520);
+				expandDivBot('bsc_bubble_grad', 525);
 			}).mouseleave(function () {
 				expandDivBot('bsc_bubble_grad', 0);
 			});
@@ -227,13 +227,7 @@ $(document).ready(function () {
 
 			var scrollFunction = function () {
 
-				var heightToTimeline = $('header').outerHeight() + $('#main_wrapper').outerHeight() - $('#about_timeline').outerHeight()
-				- $('#image_wrapper').outerHeight() - $('#contactsection').outerHeight() - $('footer').outerHeight();
-
-				/*
-				Let div increase while scrolling down
-				*/
-
+				var heightToTimeline = $('#about_timeline')[0].offsetTop;
 				var fromTop = $(window).scrollTop();
 				var beginBubblePos = $('#begin_bubble').offset().top + $('#begin_bubble').height();
 				var endBubblePos = $('#div_2009').offset().top + $('#div_2009').height()/2;
@@ -392,7 +386,7 @@ $(document).ready(function () {
 			});
 
 			$('#bsc_bubble_grad').mouseenter(function () {
-				expandDivBot('bsc_bubble_grad', 520);
+				expandDivBot('bsc_bubble_grad', 526);
 			});
 
 			$('#bsc_bubble_grad').mouseleave(function () {
